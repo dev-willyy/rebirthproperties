@@ -1,0 +1,210 @@
+// Use SASS for refactor
+.main-wrapper-home {
+  width: 100vw;
+  padding: 10px;
+  min-height: 90vh;
+  display: grid;
+  place-items: center;
+  margin-top: 70px;
+}
+
+.main-container-home {
+  max-width: 90%;
+  margin: 0 auto;
+  height: 78%;
+  grid-template-columns: 1.2fr 3fr;
+  display: grid;
+  gap: 8%;
+}
+
+.first-section-home {
+  padding-top: 27%;
+  display: grid;
+  gap: 20px;
+
+  h1 {
+    font-size: 39px;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: -1.2px;
+  }
+
+  p {
+    font-size: 13px;
+    line-height: 20px;
+    letter-spacing: -0.4px;
+  }
+
+  button {
+    border: 2px solid black;
+    background-color: #800190;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-align: center;
+    outline: none;
+    border: none;
+
+    > a {
+      display: inline-block;
+      color: white;
+      padding: 15px 44px;
+      text-decoration: none;
+
+      &:hover {
+        color: #eb01e0;
+        transition: all 0.2s ease-in;
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      transition: all 0.2s ease-in;
+      background-color: white;
+      box-shadow: 0 0 4px #800190;
+    }
+  }
+}
+
+.first-section-home * {
+  font-family: "Inter", sans-serif;
+}
+
+.second-section-home {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.property-one-home,
+.property-two-home,
+.property-three-home {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.property-one-home:hover,
+.property-two-home:hover,
+.property-three-home:hover {
+  cursor: pointer;
+  transform: translateY(-20px);
+  transition: all 0.3s ease-out;
+}
+
+.property-one-home {
+  background-image: url("../assets/images/rebirth-site.jpg");
+}
+
+.property-two-home {
+  background-image: url("../assets/images/rebirth-home.jpg");
+}
+
+.property-three-home {
+  background-image: url("../assets/images/rebirth-commercial.jpg");
+}
+
+.property-one-home span,
+.property-two-home span,
+.property-three-home span {
+  position: absolute;
+  bottom: 18px;
+  left: 23px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.property-one-home a,
+.property-two-home a,
+.property-three-home a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 960px) {
+  .main-wrapper-home {
+    max-height: 120vh;
+  }
+
+  .main-container-home {
+    min-width: 70%;
+    max-width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+    gap: 1%;
+  }
+
+  .property-one-home span,
+  .property-two-home span,
+  .property-three-home span {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .main-wrapper-home {
+    margin-block: 120px 40px;
+  }
+
+  .main-container-home {
+    gap: 8%;
+  }
+
+  .first-section-home {
+    padding-top: 10px;
+  }
+
+  .first-section-home h1,
+  .first-section-home p {
+    text-align: center;
+  }
+
+  .first-section-home button {
+    display: block;
+    margin: 0 auto;
+  }
+
+  .second-section-home {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5%;
+    grid-template-areas:
+      "property-one property-one"
+      "property-two property-three";
+  }
+
+  .property-one-home {
+    grid-area: property-one;
+    background-size: cover;
+    background-position: right;
+  }
+
+  .property-two-home {
+    grid-area: property-two;
+  }
+
+  .property-three-home {
+    grid-area: property-three;
+  }
+
+  .property-one-home span,
+  .property-two-home span,
+  .property-three-home span {
+    left: 14px;
+    bottom: 14px;
+    font-size: 23px;
+  }
+
+  .property-one-home:hover,
+  .property-two-home:hover,
+  .property-three-home:hover {
+    cursor: pointer;
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+  }
+}

@@ -1,0 +1,89 @@
+.schedule-inspection-wrapper {
+	min-height: 100vh;
+	padding-block: 130px 60px;
+
+	> section {
+		max-width: 78vw;
+		margin: 0 auto;
+		display: grid;
+		grid-template-rows: 2fr auto;
+		gap: 40px;
+
+		.schedule-container-one {
+			padding: 3px 30px;
+			display: grid;
+			grid-template-rows: 1fr 4fr;
+			gap: 12%;
+			box-shadow: 1px 3px 10px #e9ecef;
+
+			h2 {
+				text-align: center;
+				font-family: "Roboto", sans-serif;
+				font-size: 42px;
+			}
+
+			p {
+				text-align: center;
+			}
+
+			@media only screen and (max-width: 960px) {
+				grid-template-rows: 1fr 3.3fr;
+				gap: 8%;
+			}
+		}
+
+		.schedule-container-two {
+			display: grid;
+			grid-template-columns: 3.6fr 1.6fr;
+			gap: 12%;
+
+			.schedule-img-container {
+				display: grid;
+				place-items: center;
+
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+
+			.schedule-form-wrapper {
+				border-radius: 0.5rem;
+
+				.schedule-form-container {
+					padding: 0 20px 20px 20px;
+					height: 580px;
+					box-shadow: 1px 3px 10px #e9ecef;
+
+					.schedule-date-input::placeholder {
+						font-family: "Roboto", sans-serif;
+					}
+
+					.schedule-date-input:-ms-input-placeholder {
+						font-family: "Roboto", sans-serif;
+					}
+
+					.schedule-date-input::-ms-input-placeholder {
+						font-family: "Roboto", sans-serif;
+					}
+				}
+			}
+
+			@media only screen and (max-width: 960px) {
+				grid-template-columns: 1fr;
+				grid-template-rows: 2fr auto;
+				gap: 4%;
+			}
+		}
+
+		@media only screen and (max-width: 960px) {
+			max-width: 82vw;
+			gap: 2%;
+		}
+	}
+
+	@media only screen and (max-width: 960px) {
+		padding-bottom: 60px;
+		margin-bottom: 40px;
+	}
+}

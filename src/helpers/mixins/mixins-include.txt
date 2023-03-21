@@ -1,0 +1,21 @@
+// On Declaration & Assignment
+@mixin functionIdentifier {
+    block of styles
+}
+
+// On Call
+selector {
+    @include functionIdentifier();
+}
+
+// Parameters can also be passed on Declaration
+@mixin functionIdentifier(Param1, Param2) {
+    block of styles
+}
+
+// Variables will then be Passed On Call
+selector {
+    @include functionIdentifier();
+}
+
+// @use does not make it globally accessible to successive css files unlike @import

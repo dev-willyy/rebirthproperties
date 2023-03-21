@@ -1,0 +1,265 @@
+.contact-page-wrapper {
+	max-width: 80%;
+	margin: 0 auto;
+	padding-block: 130px 100px;
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: 0.7fr 0.24fr repeat(2, 1fr);
+	gap: 25px;
+
+	* {
+		font-family: "Poppins", sans-serif;
+	}
+
+	section {
+		&.contact-container-one {
+			display: grid;
+			grid-template-columns: 0.9fr 1fr;
+			gap: 4%;
+
+			img {
+				width: 100%;
+				height: auto;
+			}
+
+			@media only screen and (max-width: 960px) {
+				grid-template-columns: 1fr;
+				grid-template-rows: 0.8fr 0.4fr;
+				gap: 1%;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 960px) {
+		grid-template-rows: 0.1fr 0.24fr 1fr auto;
+		gap: 25px;
+	}
+}
+
+.container-one-first-div {
+	padding: 24px;
+
+	h2 {
+		font-size: 40px;
+		color: #333333;
+		margin-bottom: 10px;
+	}
+
+	p {
+		font-size: 14px;
+		text-align: left;
+		color: #3c3c3c;
+	}
+
+	@media only screen and (max-width: 960px) {
+		grid-row: end;
+		padding-top: 0;
+	}
+}
+
+.container-one-second-div {
+	background-image: url("../assets/images/contact-bg-stripes.png");
+	background-repeat: no-repeat;
+	background-position: right top;
+	background-attachment: fixed;
+	background-size: contain;
+}
+
+.contact-container-ommited {
+	div {
+		width: 49%;
+		padding: 24px;
+
+		h3 {
+			font-size: 40px;
+			color: #333333;
+			margin-bottom: 10px;
+
+			@media only screen and (max-width: 960px) {
+				text-align: center;
+			}
+		}
+
+		p {
+			font-size: 14px;
+			color: #3c3c3c;
+
+			@media only screen and (max-width: 960px) {
+				text-align: center;
+			}
+		}
+
+		@media only screen and (max-width: 960px) {
+			width: 100%;
+		}
+	}
+}
+
+.contact-container-two {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+
+	span {
+		font-size: 14px;
+		color: #3c3c3c;
+
+		a,
+		a:hover,
+		a:active {
+			color: #3c3c3c;
+			text-decoration: none;
+		}
+	}
+
+	@media only screen and (max-width: 960px) {
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 0.7fr;
+	}
+}
+
+.contact-two-second-div {
+	padding-top: 24px;
+	display: grid;
+	gap: 1%;
+	min-height: fit-content;
+	max-height: 48%;
+
+	div {
+		display: grid;
+		grid-template-columns: 0.2fr 2fr;
+		gap: 2%;
+
+		img {
+			width: 80%;
+			height: auto;
+		}
+
+		span:nth-of-type(2) {
+			text-align: left;
+			font-size: 15px;
+			font-weight: 500;
+			padding-top: 7px;
+
+			@media only screen and (max-width: 960px) {
+				padding-top: 0;
+			}
+		}
+	}
+
+	@media only screen and (max-width: 960px) {
+		width: 100%;
+		margin: auto;
+		min-height: 80%;
+	}
+}
+
+.contact-container-three {
+	iframe {
+		width: 100%;
+		height: 600px;
+		display: block;
+		margin: 0 auto;
+		border-radius: 0.5rem;
+		box-shadow: 0 0 4px #800190;
+
+		@media only screen and (max-width: 960px) {
+			margin-top: 10px;
+		}
+	}
+}
+
+.form_container {
+	background-color: #fff;
+	height: 500px;
+	width: 400px;
+	padding: 0.2rem 2.2rem 3.4rem 0;
+
+	form {
+		margin: 0 auto;
+		background-color: transparent;
+		display: grid;
+		grid-template-columns: 1fr;
+		place-items: left;
+		padding: 20px;
+
+		label {
+			color: #800190;
+			letter-spacing: 1.2px;
+			text-emphasis-color: none;
+			text-shadow: none;
+			font-weight: bolder;
+			float: left;
+		}
+
+		input {
+			height: 40px;
+
+			&:last-child {
+				margin-top: 14px;
+				background-color: #800190;
+				font-weight: bold;
+				font-size: 16px;
+				color: #f3f9fb;
+				border: none;
+				outline: none;
+				padding: 0.4rem 1.2rem;
+
+				&:hover {
+					scale: 1.02;
+					transition: all 0.2s ease-in;
+					background-color: #eb01ea;
+					cursor: pointer;
+				}
+			}
+
+			&:not(:last-child):active,
+			&:not(:last-child):focus {
+				outline: none;
+				border: none;
+				padding-left: 16px;
+				font-family: "Roboto", sans-serif;
+				letter-spacing: 0.8px;
+				font-size: 16px;
+			}
+		}
+
+		textarea {
+			height: 150px;
+			resize: none;
+			padding-top: 10px;
+			outline: none;
+
+			&:active,
+			&:focus {
+				border: none;
+			}
+		}
+
+		input,
+		textarea {
+			background-color: rgb(202, 197, 197);
+			width: 100%;
+			border: 1px solid #800190;
+			border-radius: 4px;
+			margin-block-start: 6px;
+			margin-block-end: 26px;
+			padding-inline: 16px;
+			letter-spacing: 0.8px;
+			font-size: 16px;
+		}
+	}
+
+	@media only screen and (max-width: 960px) {
+		width: 90%;
+		margin: 30px auto;
+		padding: 0.2rem 2.2rem 3.4rem;
+		box-shadow: 0 0 1px #800190;
+	}
+}
+
+@media screen and (max-width: 560px) {
+	.form_container {
+		width: 80vw;
+		padding: 0.2rem 0.6rem 2.4rem;
+	}
+}

@@ -1,0 +1,52 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* 
+   Custom Scroll Bar
+         */
+/* Internet Explorer */
+html {
+  overflow-x: hidden;
+  scrollbar-width: normal;
+  scrollbar-color: #eb01ea #800190;
+  scroll-behavior: smooth !important;
+}
+
+/* For chrome and related browsers */
+html::-webkit-scrollbar {
+  width: 1.2vw;
+}
+
+html::-webkit-scrollbar-button {
+  background-color: #e8d2a6;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: #e8d2a6;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #800190;
+  border-radius: 0.5vw;
+  border: 0.26vw solid #e8d2a6;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background-color: #eb01ea;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.profile-icon {
+  translate: 7px 0;
+
+  @media only screen and (max-width: 960px) {
+    translate: 15px 0;
+  }
+}

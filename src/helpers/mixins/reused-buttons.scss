@@ -1,0 +1,20 @@
+@mixin reUsedBtn {
+	outline: none;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+	background-color: var(--primary);
+	border: 0.2px solid transparent;
+	border-radius: 4px;
+	padding: 15px 44px;
+	font-size: 12px;
+}
+
+@mixin reUsedBtnHover {
+	scale: 1.1;
+	background-color: transparent;
+	border: 0.2px solid var(--primary);
+	color: #800190;
+	transition: all 0.4s ease-out;
+}

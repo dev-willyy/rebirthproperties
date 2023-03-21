@@ -1,0 +1,19 @@
+@import "../helpers/mixins/reused-buttons.scss";
+
+:root {
+    --primary: #800190;
+}
+
+.btn {
+    @include reUsedBtn();
+}
+
+.btn:hover {
+    @include reUsedBtnHover;
+}
+
+@media screen and (max-width: 960px) {
+    .btn {
+        font-size: 13px;
+    }
+}

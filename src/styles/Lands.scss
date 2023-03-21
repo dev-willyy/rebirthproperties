@@ -1,0 +1,87 @@
+@import "../helpers/mixins/reused-buttons.scss";
+
+.lands-wrapper {
+	display: flex;
+	min-height: 100vh;
+	padding-block: 150px 60px;
+	align-items: center;
+	justify-content: center;
+
+	.lands-parent-container {
+		// border: 2px solid black;
+		width: 78vw;
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 50px;
+
+		.lands-child-container {
+			// border: 2px solid blue;
+			display: grid;
+			grid-template-rows: 10fr 0.5fr 0.2fr 1.2fr 0.6fr;
+			gap: 2%;
+
+			button {
+				@include reUsedBtn();
+				font-size: 20px;
+				padding-inline: 60px;
+				border: 0.2px solid var(--primary);
+
+				&:hover {
+					@include reUsedBtnHover();
+				}
+			}
+
+			h3 {
+				font-size: 32px;
+				color: #333333;
+			}
+
+			h4 {
+				font-size: 23px;
+				color: #333333;
+			}
+
+			p {
+				font-size: 14px;
+			}
+
+			&.first,
+			&.second {
+				figure {
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: cover;
+					box-shadow: 1px 3px 10px #e9ecef;
+
+					@media only screen and (max-width: 960px) {
+						background-size: contain;
+					}
+				}
+			}
+
+			&.first {
+				figure {
+					background-image: url("../assets/images/ilora-resident-prelaunch.jpg");
+				}
+			}
+
+			&.second {
+				figure {
+					background-image: url("../assets/images/ilora-resident-postlaunch.jpg");
+				}
+			}
+
+			@media only screen and (max-width: 960px) {
+				grid-template-rows: 5fr 0.5fr 0.2fr 1.2fr 0.6fr;
+			}
+		}
+
+		@media only screen and (max-width: 960px) {
+			width: 90%;
+			grid-template-columns: 1fr;
+			grid-template-rows: repeat(2, 1fr);
+			gap: 80px;
+		}
+	}
+}

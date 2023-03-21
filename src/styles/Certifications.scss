@@ -1,0 +1,38 @@
+.certifications-largest-wrapper {
+  transform: translateY(-40px);
+}
+
+.certifications-wrapper {
+  margin: 0 auto;
+  height: 76px;
+  width: 90vw;
+  display: grid;
+  place-items: flex-end;
+}
+
+.certifications-container {
+  height: 80%;
+  width: 135px;
+  background-color: rgb(251, 239, 225);
+  box-shadow: 0 0 2px white;
+  border-radius: 0.5rem;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.certifications-container img {
+  height: 60px;
+  object-fit: cover;
+}
+
+@media only screen and (max-width: 960px) {
+  .certifications-largest-wrapper {
+    transform: translateY(-30px);
+  }
+
+  .certifications-wrapper {
+    display: grid;
+    place-items: center;
+  }
+}
