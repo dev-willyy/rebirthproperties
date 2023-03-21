@@ -28,7 +28,7 @@ function Home() {
                     >
                         <div className="property-one-home">
                             <Link to="/lands">
-                                <span>Lands</span>
+                                <span>Land</span>
                             </Link>
                         </div>
                         <div className="property-two-home">
